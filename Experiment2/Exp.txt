@@ -1,0 +1,26 @@
+OScope:
+1: Fig1 V_Out over time f=100Hz A=5Vpp
+2: ^ but cap removed
+3: ^^ but resistor removed
+4: ^^^ but triangle wave
+5: ^^^^ but square wave
+6: fig2 without cap V_out over time  f=100Hz A=5Vpp
+7: ^ with cap
+8: ^ square wave
+9: ^^ with triangle wave
+10: Fig3 ch1:Vin Ch2: Vout f=1kHz A=10Vpp
+11: ^ but with multiple cycles
+12: ^^ but A=5Vpp
+13: ^^^ but A=2Vpp
+14: ^^^ but triangular
+15: ^^^^ but square
+16: Fig4  ch1:Vin Ch2: Vout f=1kHz A=10Vpp
+17: ^ but triangle
+18: ^^ but square
+19: Fig5 ch1:Vin Ch2: Vout f=1kHz A=5Vpp
+20: Fig5 ch1:Vin Ch2: Vout f=1kHz A=7Vpp
+21: Fig5 ch1:Vin Ch2: Vout f=1kHz A=3Vpp
+22: Fig5 ch1:Vin Ch2: Vout f=1kHz A=1Vpp
+23: Fig5 ch1:Vin Ch2: Vout f=1kHz A=2Vpp Offset=2V
+25: Fig5 ch1:Vin Ch2: Vout f=1kHz A=5Vpp Offset=0V
+26: Fig5 ch1:Vin Ch2: Vout f=1kHz A=5Vpp Offset=2V
