@@ -1,0 +1,16 @@
+LTspice 26.1.1 for Windows
+Circuit: C:\Users\br652195\Documents\EEE3307C\Experiment3\Draft1.net
+Start Time: Tue Oct  6 13:36:44 2026
+solver = Normal
+Maximum thread count: 24
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.036 seconds.
+Total iterations: 7
+
+Files loaded:
+C:\Users\br652195\Documents\EEE3307C\Experiment3\Draft1.net
+C:\Users\br652195\AppData\Local\LTspice\lib\cmp\standard.bjt
+

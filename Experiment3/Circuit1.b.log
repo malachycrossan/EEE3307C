@@ -1,15 +1,4 @@
-LTspice 26.0.2 for Windows
-Circuit: C:\Users\malac\EEE3307C\Experiment3\Circuit1.b.net
-Start Time: Tue Oct  6 12:17:43 2026
-solver = Normal
-Maximum thread count: 6
-tnom = 27
-temp = 27
-method = trap
-Direct Newton iteration succeeded in finding operating point.
-Total elapsed time: 0.049 seconds.
-
-Files loaded:
-C:\Users\malac\EEE3307C\Experiment3\Circuit1.b.net
-C:\Users\malac\AppData\Local\LTspice\lib\cmp\standard.bjt
-
+LTspice 26.1.1 for Windows
+Circuit: C:\Users\br652195\Documents\EEE3307C\Experiment3\Circuit1.b.net
+Start Time: Tue Oct  6 13:30:43 2026
+This circuit does not contain a node other than node "0" (GND)
