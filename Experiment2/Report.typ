@@ -60,61 +60,75 @@
 
 == Objective
 To study the characteristics and the applications of PN junction diodes
-== Simulation
-/* We first set up the circuit as seen in @SIM_I_VB-0V--2V. We then ran a DC sweep analysis to measure the current through the diode and resistor as a function of the voltage across the diode.
-#figure(
-  image("E1/vbvsIr.png",width: 80%),
-  caption: [
-  $I_R$ over $V_B$ (Simulation)\
-  Date: 2026-09-14
-  ]
-)<SIM_I_VB-0V--2V>
-Updating the voltage source to a 5 kHz sine wave with an amplitude of 2 Vpp, we then ran a transient analysis to measure the voltage across the resistor over time. The results can be seen in @SIM_VR-t_f-5k_A-2Vpp.
-#figure(
-  image("E1/Acwave.png",width: 80%),
-  caption: [
-  $V_R$ over time (Simulation)\
-  $f=5"kHz"$ \
-  $A=2"Vpp"$ \
-  Date: 2026-09-14
-  ]
-)<SIM_VR-t_f-5k_A-2Vpp> */
-== Experiment
+== Pre-lab
 === Rectifiers
-The first circuit we set up was a simple half-wave rectifier. 
-We then set up the circuit on a breadboard. The voltage source was represented by a variable power supply which was initially set to $1 V$. The resulting current in the circuit was measured using the DMM (@DMM_I_VB-1V). The voltage source was then increased to $2 V$ and the current was measured again (@DMM_I_VB-2V).
+The first circuit we set up was a simple half-wave rectifier.
+We first simulated the circuit in LTSpice. We chose $100 mu F$ and $2 k Omega$. @SimA1 shows the circuit without the capacitor and @SimA2 shows the circuit with the Resistor. @SimA3 shows the circuit with both in.
+#figure(image("assets/withoutCapPL.png",width: 100%), caption: ["Half-wave rectifier without capacitor"])<SimA1>
+#figure(image("assets/withoutResistorPb.png",width: 100%), caption: ["Half-wave rectifier without resistor"])<SimA2>
+#figure(image("assets/partcprelab.png",width: 100%), caption: ["Half-wave rectifier with both capacitor and resistor"])<SimA3>
 
-Next, we connected the circuit to a function generator set to a 5 kHz sine wave with an amplitude of 2 Vpp. The voltage across the resistor was measured using an oscilloscope (@Scope_Vr-t_f-5k_A-2Vpp).
-== Results
-Comparing the results of the simulation and experimental values, we can see that at the two experimental points (@DMM_I_VB-1V and @DMM_I_VB-2V) the current measured is very close to the simulated values.
-#columns(2)[
-#figure(
-  image("DMM_I_VB-1V.PNG",width: 80%),
-  caption: [
-  Current I of circuit $V_B = 1V$ \
-  Date: 2026-09-08
-  ]
-)<DMM_I_VB-1V>
-#colbreak()
-#figure(
-  image("DMM_I_VB-2V.PNG",width: 80%),
-  caption: [
-  Current I of circuit $V_B = 2V$ \
-  Date: 2026-09-08
-  ]
-)<DMM_I_VB-2V>
-]
-Also, the voltage across the resistor over time measured by the oscilloscope is very similar to the simulated results (@Scope_Vr-t_f-5k_A-2Vpp).
+The next circuit was a full-wave rectifier. We first simulated the circuit in LTSpice. We chose $100 mu F$ and $2 k Omega$. @SimAB1 shows the circuit without the capacitor and @SimAB2 shows the circuit with the Resistor. @SimAB3 shows the circuit with both in.
 
-#figure(
-  image("Scope_Vr-t_f-5k_A-2Vpp.PNG",width: 50%),
-  caption: [
-  $V_R$ over time \
-  $f=5"kHz"$ \
-  $A=2"Vpp"$ \
-  Date: 2026-09-08
-  ]
-)<Scope_Vr-t_f-5k_A-2Vpp>
+#figure(image("assets/fig2p1.png",width: 100%), caption: ["Half-wave rectifier without capacitor"])<SimAB1>
+#figure(image("assets/fig2p2.png",width: 100%), caption: ["Half-wave rectifier without resistor"])<SimAB2>
+#figure(image("assets/fig2p3.png",width: 100%), caption: ["Half-wave rectifier with both capacitor and resistor"])<SimAB3>
+
+=== Clipping circuits
+We determined the transfer characteristics and output waveforms of the clipper circuits using LTSpice.
+The first circuits transfer characteristics are showing in @SimB1 and the output waveforms are shown in @SimB2. The second circuits transfer characteristics are showing in @SimB3 and the output waveforms are shown in @SimB4.
+
+#figure(image("assets/fig3TranserChar.png",width: 100%), caption: ["Clipping circuit 1 transfer characteristics"])<SimB1>
+#figure(image("assets/fig3outputWave.png",width: 100%), caption: ["Clipping circuit 1 output waveforms"])<SimB2>
+#figure(image("assets/fig4Tramsferchar.png",width: 100%), caption: ["Clipping circuit 2 transfer characteristics"])<SimB3>
+#figure(image("assets/fig4outputWave.png",width: 100%), caption: ["Clipping circuit 2 output waveforms"])<SimB4>
+
+=== Clamping circuits
+For the clamping circuit, we used the values in @ValC1. The output is shown in @SimC1.
+$
+  R = 2 k Omega\
+  C = 100 mu F\
+  V_B = 3 V\
+  "Diode: 1N4148"\
+$ <ValC1>
+
+#figure(image("assets/fig5partoutput.png",width: 100%), caption: ["Clamping circuit output waveforms"])<SimC1>
+
+== Experiment
+Experimental results are below
+
+#figure(image("assets/P5W20K01.PNG",width: 80%), caption: [Half-wave rectifier $f=100 "Hz"$ $A=5 V$]) <Exp1>
+#figure(image("assets/P5W20K02.PNG",width: 80%), caption: [Half-wave rectifier with capacitor removed $f=100 "Hz"$ $A=5 V$]) <Exp2>
+#figure(image("assets/P5W20K03.PNG",width: 80%), caption: [Half-wave rectifier with resistor removed $f=100 "Hz"$ $A=5 V$]) <Exp3>
+#figure(image("assets/P5W20K04.PNG",width: 80%), caption: [Half-wave rectifier with triangular wave $f=100 "Hz"$ $A=5 V$]) <Exp4>
+#figure(image("assets/P5W20K05.PNG",width: 80%), caption: [Half-wave rectifier with square wave $f=100 "Hz"$ $A=5 V$]) <Exp5>
+
+
+#figure(image("assets/P5W20K06.PNG",width: 80%), caption: [Full-wave rectifier without capacitor $f=100 "Hz"$ $A=5 V$]) <Exp6>
+#figure(image("assets/P5W20K07.PNG",width: 80%), caption: [Full-wave rectifier with capacitor $f=100 "Hz"$ $A=5 V$]) <Exp7>
+#figure(image("assets/P5W20K09.PNG",width: 80%), caption: [Full-wave rectifier with triangular wave $f=100 "Hz"$ $A=5 V$]) <Exp9>
+#figure(image("assets/P5W20K08.PNG",width: 80%), caption: [Full-wave rectifier with square wave $f=100 "Hz"$ $A=5 V$]) <Exp8>
+
+
+#figure(image("assets/P5W20K10.PNG",width: 80%), caption: [Clipping circuit 1 $f=1 k"Hz"$ $A=10 V$\ Ch1: $V_"in"$ \ Ch2: $V_"out"$ \ ]) <Exp10>
+#figure(image("assets/P5W20K12.PNG",width: 80%), caption: [Clipping circuit 1 $f=1 k"Hz"$ $A=5 V$\ Ch1: $V_"in"$ \ Ch2: $V_"out"$ \ ]) <Exp12>
+#figure(image("assets/P5W20K13.PNG",width: 80%), caption: [Clipping circuit 1 $f=1 k"Hz"$ $A=2 V$\ Ch1: $V_"in"$ \ Ch2: $V_"out"$ \ ]) <Exp13>
+#figure(image("assets/P5W20K14.PNG",width: 80%), caption: [Clipping circuit 1 with triangular wave $f=1 k"Hz"$ $A=10 V$\ Ch1: $V_"in"$ \ Ch2: $V_"out"$ \ ]) <Exp14>
+#figure(image("assets/P5W20K15.PNG",width: 80%), caption: [Clipping circuit 1 with square wave $f=1 k"Hz"$ $A=10 V$\ Ch1: $V_"in"$ \ Ch2: $V_"out"$ \ ]) <Exp15>
+
+
+#figure(image("assets/P5W20K16.PNG",width: 80%), caption: []) <Exp14>
+#figure(image("assets/P5W20K16.PNG",width: 80%), caption: [])
+#figure(image("assets/P5W20K17.PNG",width: 80%), caption: [])
+#figure(image("assets/P5W20K18.PNG",width: 80%), caption: [])
+#figure(image("assets/P5W20K19.PNG",width: 80%), caption: [])
+#figure(image("assets/P5W20K20.PNG",width: 80%), caption: [])
+#figure(image("assets/P5W20K21.PNG",width: 80%), caption: [])
+#figure(image("assets/P5W20K22.PNG",width: 80%), caption: [])
+#figure(image("assets/P5W20K23.PNG",width: 80%), caption: [])
+#figure(image("assets/P5W20K24.PNG",width: 80%), caption: [])
+#figure(image("assets/P5W20K25.PNG",width: 80%), caption: [])
+#figure(image("assets/P5W20K26.PNG",width: 80%), caption: [])
 
 == Conclusion
-This lab was successful in demonstrating the purpose of simulation and experimental validation. The results of the simulation and experimental measurements were very similar, indicating that the simulation was accurate. This lab also familiarized us with using LTSpice, a DMM, and an oscilloscope.
+In this lab, we studied the characteristics and applications of PN junction diodes. We simulated and built half-wave and full-wave rectifiers, clipping circuits, and clamping circuits. The experimental results closely matched the simulation results, confirming our understanding of diode behavior in various circuit configurations.
