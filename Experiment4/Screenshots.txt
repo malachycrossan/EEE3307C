@@ -1,0 +1,7 @@
+E1P1_02: EXP4.2
+E1P1_03: EXP4.3
+E1P1_04: EXP4.4
+E1P1_05: EXP4.5
+
+DMM01 fig1 original values Icq 6.2k
+DMM02 fig1 original values Icq 3.2k
