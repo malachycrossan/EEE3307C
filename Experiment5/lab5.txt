@@ -1,0 +1,27 @@
+Qpoint I_C 1.11mA V_CE 2.37V
+1)
+2)
+Vs 7.0mV RMS
+Vi 5.0mv RMS
+Vo 308mV RMS
+3)
+I .0004mA (measured) dont use
+4)
+VL 308mV RMS
+Vo 960mV (without RL connected)
+
+V_R_S = 2.3mV
+I_S = 2.3m/1.8k = .0013mA (calculated)
+
+P1 Fig1 small sig gain vs
+P2 Fig1 small sig gain vi
+
+Vs 7.0mV
+Vi 6.6mV
+Vo 6.4mV
+
+V_R_S = 1.3mV
+I_S = 1.3mV / 1.8k = .0007mA
+
+V_L 6.4mV
+V_o 6.5mV
