@@ -1,0 +1,13 @@
+1: V_RL @80mV dont use
+2: V_RL @20mV
+3: same but with cursor instead
+
+AC1: V_Out with RL
+AC2: V_out without RL
+
+iwth 10k series with source
+40mVpp input
+vs-vi = 4.6mV
+vi = 9.3mV
+
+Rin = 10k * vi/(vs-vi) = 20.22k
