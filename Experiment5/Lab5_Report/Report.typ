@@ -238,6 +238,15 @@ $
 ) <tab:prelab> */
 
 == Simulation
+With CE
+#image("Sim1.PNG")
+#image("Sim4.PNG")
+Without CE
+#image("Sim2.PNG")
+#image("Sim5.PNG")
+Emitter follower
+#image("Sim3.PNG")
+#image("Sim6.PNG")
 == Experimental Procedure
 The circuits of @fig:ce and @fig:ef were built on a breadboard with $R_1 = 120k Omega$, $R_2 = 36k Omega$, $C_B = C_L = 10 mu F$ and $C_E = 100 mu F$, powered from a 12 V supply.
 

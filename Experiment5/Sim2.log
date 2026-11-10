@@ -1,0 +1,19 @@
+LTspice 26.1.1 for Windows
+Circuit: C:\Users\ma378458\Documents\EEE3307C\Experiment5\Sim2.net
+Start Time: Tue Nov 10 12:49:45 2026
+solver = Normal
+Maximum thread count: 24
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration succeeded in finding operating point.
+Changing Tseed to 9.76563e-11
+Changing Tseed to 9.76562e-13
+Changing Tseed to 9.76562e-10
+Total elapsed time: 0.042 seconds.
+Total iterations: 2107
+
+Files loaded:
+C:\Users\ma378458\Documents\EEE3307C\Experiment5\Sim2.net
+C:\Users\ma378458\AppData\Local\LTspice\lib\cmp\standard.bjt
+
